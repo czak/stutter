@@ -110,6 +110,7 @@ export default class Stutter {
 
   destroy () {
     clearTimeout(this.timer)
+    this.ui.removeAllListeners();
     this.ui.hide()
     this.isPlaying = false
     this.block = null
